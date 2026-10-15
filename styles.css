@@ -1,0 +1,164 @@
+:root { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; margin: 0; }
+
+body {
+  min-width: 280px;
+  background: #121213;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.screen, .terms-screen, .home-screen {
+  position: relative;
+  width: min(100%, 375px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: #202022;
+}
+
+.signup-screen, .pin-screen { aspect-ratio: 375 / 919; }
+
+.screen-art, .pin-art, .terms-screen > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.phone-form {
+  position: absolute;
+  inset: 49.3% 4.3% auto;
+  display: grid;
+  gap: 10px;
+}
+
+.phone-form input, .pin-content input {
+  width: 100%;
+  height: 53px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #d1d1d1;
+  font-size: 15px;
+  letter-spacing: .4px;
+  outline: 2px solid transparent;
+  padding: 0 18px;
+}
+
+.phone-form input::placeholder { color: transparent; }
+.pin-content input::placeholder { color: #a9a9ad; opacity: 1; }
+
+button {
+  width: 100%;
+  height: 53px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.phone-form input:focus-visible, .pin-content input:focus-visible, button:focus-visible, a:focus-visible {
+  outline: 3px solid #94ea75;
+  outline-offset: 2px;
+}
+
+.terms-link {
+  position: absolute;
+  top: 92.2%;
+  left: 43%;
+  width: 16%;
+  height: 2.4%;
+  border-radius: 4px;
+}
+
+.pin-art { position: absolute; inset: 0; }
+
+.pin-logo {
+  position: absolute;
+  top: 2.2%;
+  left: 50%;
+  width: 52px;
+  height: 24px;
+  transform: translateX(-50%);
+}
+
+.pin-hero {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: .76;
+}
+
+.pin-content {
+  position: absolute;
+  top: 43%;
+  left: 4.3%;
+  width: 91.4%;
+  text-align: center;
+}
+
+.pin-content h1 { margin: 0 0 8px; font-size: 22px; }
+.pin-content p { margin: 0 0 24px; color: #b9b9be; font-size: 14px; }
+.pin-content form { display: grid; gap: 12px; }
+
+.pin-content input {
+  background: #fff;
+  color: #333;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 6px;
+}
+
+.pin-content button { background: #8ada72; color: #151515; }
+
+.pin-terms-link {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  color: #9ee881;
+  font-size: 12px;
+  text-align: center;
+}
+
+.terms-screen { min-height: 100vh; }
+.terms-screen > img { height: auto; }
+
+.home-screen { aspect-ratio: 375 / 963; }
+.home-screen > img { display: block; width: 100%; height: 100%; }
+
+.download-link, .requirements-link {
+  position: absolute;
+  border-radius: 4px;
+}
+
+.download-link { top: 63.9%; left: 7.7%; width: 84.3%; height: 5.2%; }
+.requirements-link { top: 70.7%; left: 34%; width: 32%; height: 2.2%; }
+
+.terms-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17%;
+  height: 2.1%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (min-width: 376px) {
+  .screen, .terms-screen, .home-screen { box-shadow: 0 0 34px rgb(0 0 0 / .38); }
+}
