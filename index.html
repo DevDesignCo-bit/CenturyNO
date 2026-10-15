@@ -14,11 +14,19 @@
 
       <form class="phone-form" action="pin.html" method="get">
         <label class="sr-only" for="phone">Mobilnummer</label>
-        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+47...." required />
+        <div class="phone-field">
+          <span aria-hidden="true">+47</span>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" pattern="[0-9]{8}" maxlength="8" aria-label="Mobilnummer etter +47" required />
+        </div>
         <button type="submit">BETAL NÅ</button>
       </form>
 
       <a class="terms-link" href="terms.html" aria-label="Vilkår og betingelser"></a>
     </main>
+    <script>
+      document.querySelector('#phone').addEventListener('input', (event) => {
+        event.target.value = event.target.value.replace(/\D/g, '').slice(0, 8);
+      });
+    </script>
   </body>
 </html>
